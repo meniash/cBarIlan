@@ -1,0 +1,6 @@
+# ninja log v7
+3	19	7792051712460824	clean	7cad43144eea5c8
+22	151	7792051551006751	ex1/CMakeFiles/ex1.dir/main.c.obj	8bd6626ea357c636
+25	144	7792051711752250	CMakeFiles/clean-all	3ccf286618ece30f
+25	144	7792051711752250	C:/Users/menas/cBarIlan/build/CMakeFiles/clean-all	3ccf286618ece30f
+152	318	7792051552308108	ex1/ex1.exe	86eeb17713da388

@@ -1,0 +1,13 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/menas/cBarIlan/build/cmake_install.cmake",
+		"C:/Users/menas/cBarIlan/build/ex1/cmake_install.cmake",
+		"C:/Users/menas/cBarIlan/build/ex2/cmake_install.cmake",
+		"C:/Users/menas/cBarIlan/build/ex3/cmake_install.cmake",
+		"C:/Users/menas/cBarIlan/build/ex4/cmake_install.cmake",
+		"C:/Users/menas/cBarIlan/build/ex5/cmake_install.cmake",
+		"C:/Users/menas/cBarIlan/build/ex6/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,213 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "ex1",
+					"jsonFile" : "directory-ex1-Debug-357aae4f560ae0170635.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "ex1",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "ex2",
+					"jsonFile" : "directory-ex2-Debug-823a826b3a7bd72deaae.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "ex2",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "ex3",
+					"jsonFile" : "directory-ex3-Debug-c3335b205a6104a669d8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "ex3",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "ex4",
+					"jsonFile" : "directory-ex4-Debug-44e4e34a33349d003e48.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "ex4",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "ex5",
+					"jsonFile" : "directory-ex5-Debug-91ca71605059229f464a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "ex5",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "ex6",
+					"jsonFile" : "directory-ex6-Debug-a9c0da73b52e5bfccf2b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "ex6",
+					"targetIndexes" : 
+					[
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"name" : "cBarIlan",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "clean-all::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-clean-all-Debug-72e63f9fcb6897cf1d5b.json",
+					"name" : "clean-all",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ex1::@a1cba6c0076c0e3e5cd5",
+					"jsonFile" : "target-ex1-Debug-97d9e57bd5a915ef4c02.json",
+					"name" : "ex1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ex2::@90cc7eabafb06eba8af5",
+					"jsonFile" : "target-ex2-Debug-e50bdf11f1beb426f3fe.json",
+					"name" : "ex2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ex3::@72ee8839e4d8e89b02ff",
+					"jsonFile" : "target-ex3-Debug-23270051e703bd8e4d69.json",
+					"name" : "ex3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ex4::@23ce2bd2cec6375b0e52",
+					"jsonFile" : "target-ex4-Debug-e5dc69deca0501ec80fc.json",
+					"name" : "ex4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "ex5::@19af34f5c2fe92570fd2",
+					"jsonFile" : "target-ex5-Debug-fc0e60dda6b34a937f85.json",
+					"name" : "ex5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "ex6::@b004e84bbe31d0a528e1",
+					"jsonFile" : "target-ex6-Debug-994fff9780541ddf1bb7.json",
+					"name" : "ex6",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/menas/cBarIlan/build",
+		"source" : "C:/Users/menas/cBarIlan"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}
