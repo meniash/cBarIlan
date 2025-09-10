@@ -1,25 +1,41 @@
+# ======================
 # Build directories
-build/
-CMakeFiles/
+# ======================
+/build/
+/**/build/
+
+# CMake generated files
 CMakeCache.txt
+CMakeFiles/
 cmake_install.cmake
-compile_commands.json
 Makefile
 
-# Executables
+# Ninja build files
+*.ninja
+.ninja_deps
+.ninja_log
+
+# ======================
+# Compiled binaries
+# ======================
 *.exe
 *.out
-*.o
-*.obj
 *.dll
 *.so
+*.dylib
 *.a
 *.lib
+*.obj
+*.o
 
-# VS Code settings
+# ======================
+# VS Code
+# ======================
 .vscode/
 *.code-workspace
 
+# ======================
 # OS-specific junk
+# ======================
 .DS_Store
 Thumbs.db
