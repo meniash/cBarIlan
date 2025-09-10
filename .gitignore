@@ -1,0 +1,25 @@
+# Build directories
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+Makefile
+
+# Executables
+*.exe
+*.out
+*.o
+*.obj
+*.dll
+*.so
+*.a
+*.lib
+
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
