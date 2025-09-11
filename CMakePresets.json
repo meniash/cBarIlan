@@ -1,40 +1,82 @@
 {
-  "version": 3,
-  "cmakeMinimumRequired": { "major": 3, "minor": 19, "patch": 0 },
-
-  "configurePresets": [
-    {
-      "name": "debug",
-      "displayName": "Debug",
-      "generator": "Ninja",
-      "binaryDir": "${sourceDir}/build/debug",
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug",
-        "CMAKE_C_STANDARD": "99",
-        "CMAKE_C_FLAGS": "-Wall -Wextra -g"
-      }
+    "version": 3,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 19,
+        "patch": 0
     },
-    {
-      "name": "release",
-      "displayName": "Release",
-      "generator": "Ninja",
-      "binaryDir": "${sourceDir}/build/release",
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_C_STANDARD": "99",
-        "CMAKE_C_FLAGS": "-O3 -DNDEBUG"
-      }
-    }
-  ],
-
-  "buildPresets": [
-    { "name": "build-debug", "displayName": "Build (Debug)", "configurePreset": "debug" },
-    { "name": "build-release", "displayName": "Build (Release)", "configurePreset": "release" },
-
-    { "name": "clean-objects-debug", "displayName": "Clean objects (Debug)", "configurePreset": "debug", "targets": ["clean"] },
-    { "name": "clean-objects-release", "displayName": "Clean objects (Release)", "configurePreset": "release", "targets": ["clean"] },
-
-    { "name": "clean-all-debug", "displayName": "CLEAN ALL (Debug)", "configurePreset": "debug", "targets": ["clean-all"] },
-    { "name": "clean-all-release", "displayName": "CLEAN ALL (Release)", "configurePreset": "release", "targets": ["clean-all"] }
-  ]
+    "configurePresets": [
+        {
+            "name": "debug",
+            "displayName": "Debug",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_STANDARD": "99",
+                "CMAKE_C_FLAGS": "-Wall -Wextra -g"
+            }
+        },
+        {
+            "name": "release",
+            "displayName": "Release",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_C_STANDARD": "99",
+                "CMAKE_C_FLAGS": "-O3 -DNDEBUG"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "build-debug",
+            "displayName": "Build (Debug)",
+            "configurePreset": "debug"
+        },
+        {
+            "name": "build-release",
+            "displayName": "Build (Release)",
+            "configurePreset": "release"
+        },
+        {
+            "name": "clean-objects-debug",
+            "displayName": "Clean objects (Debug)",
+            "configurePreset": "debug",
+            "targets": [
+                "clean"
+            ]
+        },
+        {
+            "name": "clean-objects-release",
+            "displayName": "Clean objects (Release)",
+            "configurePreset": "release",
+            "targets": [
+                "clean"
+            ]
+        },
+        {
+            "name": "clean-all-debug",
+            "displayName": "CLEAN ALL (Debug)",
+            "configurePreset": "debug",
+            "targets": [
+                "clean-all"
+            ]
+        },
+        {
+            "name": "clean-all-release",
+            "displayName": "CLEAN ALL (Release)",
+            "configurePreset": "release",
+            "targets": [
+                "clean-all"
+            ]
+        },
+        {
+            "name": "p",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "debug"
+        }
+    ]
 }
