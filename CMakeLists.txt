@@ -3,18 +3,19 @@ project(cBarIlan C)
 
 set(CMAKE_C_STANDARD 99)
 
-# Helper: each exercise is a folder with main.c
-function(add_exercise dir)
-    add_executable(${dir} ${dir}/main.c)
-endfunction()
+# Common compile flags
+set(COMMON_COMPILE_FLAGS -Wall -Wextra -g)
 
-# Your exercises
-add_exercise(ex1)
-add_exercise(ex2)
-add_exercise(ex3)
-add_exercise(ex4)
-add_exercise(ex5)
-add_exercise(ex6)
+# Find all subdirectories starting with "ex"
+file(GLOB EX_DIRS RELATIVE ${CMAKE_SOURCE_DIR} "ex*")
+
+foreach(ex ${EX_DIRS})
+    file(GLOB sources "${ex}/*.c")
+    if(sources) # only if the folder has .c files
+        add_executable(${ex} ${sources})
+        target_compile_options(${ex} PRIVATE ${COMMON_COMPILE_FLAGS})
+    endif()
+endforeach()
 
 # --- CLEAN TARGETS ---
 
@@ -26,7 +27,9 @@ add_custom_target(clean-objects
 
 # full wipe: delete entire build dir (you must reconfigure after this)
 add_custom_target(clean-all
-    COMMAND ${CMAKE_COMMAND} -E rm -rf "${CMAKE_BINARY_DIR}"
+    COMMAND ${CMAKE_COMMAND} -E echo "Wiping build directory: ${CMAKE_BINARY_DIR}"
+    COMMAND ${CMAKE_COMMAND} -E remove_directory "${CMAKE_BINARY_DIR}"
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}   # <--- important: run from source, not build
     COMMENT "WIPED ${CMAKE_BINARY_DIR}"
 )
 

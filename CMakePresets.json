@@ -77,6 +77,12 @@
             "description": "",
             "displayName": "",
             "configurePreset": "debug"
+        },
+        {
+            "name": "y",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "debug"
         }
     ]
 }

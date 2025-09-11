@@ -1,1 +1,0 @@
-add_executable(ex6 main.c)

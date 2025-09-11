@@ -1,1 +1,0 @@
-add_executable(ex3 main.c)
