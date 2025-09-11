@@ -83,6 +83,30 @@
             "description": "",
             "displayName": "",
             "configurePreset": "debug"
+        },
+        {
+            "name": "d",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "debug"
+        },
+        {
+            "name": "ex1",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "debug"
+        },
+        {
+            "name": "\"hello\" \"world\" \"1\"",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "release"
+        },
+        {
+            "name": "hello world",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "debug"
         }
     ]
 }
