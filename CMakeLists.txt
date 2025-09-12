@@ -19,17 +19,16 @@ endforeach()
 
 # --- CLEAN TARGETS ---
 
-# safe clean: remove objects/outputs but keep cache
+# Safe clean: removes object files/outputs, but keeps cache and build trees
 add_custom_target(clean-objects
     COMMAND ${CMAKE_COMMAND} --build ${CMAKE_BINARY_DIR} --target clean
     COMMENT "Removed object files and binaries (cache kept)."
 )
 
-# full wipe: delete entire build dir (you must reconfigure after this)
+# Full wipe: removes *both* debug and release build directories
 add_custom_target(clean-all
-    COMMAND ${CMAKE_COMMAND} -E echo "Wiping build directory: ${CMAKE_BINARY_DIR}"
-    COMMAND ${CMAKE_COMMAND} -E remove_directory "${CMAKE_BINARY_DIR}"
-    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}   # <--- important: run from source, not build
-    COMMENT "WIPED ${CMAKE_BINARY_DIR}"
+    COMMAND ${CMAKE_COMMAND} -E echo "Wiping ALL build directories..."
+    COMMAND ${CMAKE_COMMAND} -E rm -rf "${CMAKE_SOURCE_DIR}/build/debug"
+    COMMAND ${CMAKE_COMMAND} -E rm -rf "${CMAKE_SOURCE_DIR}/build/release"
+    COMMENT "Removed ALL build directories (debug + release). Reconfigure required."
 )
-
