@@ -1,6 +1,8 @@
 #include <stdio.h>
 void Rhombus();
+void countBits();
 void convertFrom20ToDec();
+void checkIfPowerOf2();
 int main(){
     int userParam = 0;
     do{
@@ -21,9 +23,11 @@ int main(){
             case 3:
             break;
             case 4:
-            break;
+                checkIfPowerOf2();
+                break;
             case 5:
-            break;
+                countBits();
+                break;
             case 6:
             break;
             case 7:
@@ -65,4 +69,24 @@ void convertFrom20ToDec() {
     if(!flag){
         printf("%d\n",num);
     }
+}
+void checkIfPowerOf2() {
+    unsigned int n;
+    printf("Enter a number:\n");
+    scanf("%u", &n);
+    printf("%u %s a power of 2\n",
+           n,
+           (n > 0 && (n & (n - 1)) == 0) ? "is" : "is not");
+
+}
+void countBits() {
+    int a,b,x,count = 0;
+    printf("Enter two numbers:\n");
+    scanf(" %d %d",&a,&b);
+    x= a^b;
+    while(x) {
+        x= x&(x-1);
+        count++;
+    }
+    printf("There are %d different bits\n",count);
 }
