@@ -4,6 +4,7 @@ void countBits();
 void convertFrom20ToDec();
 void checkIfPowerOf2();
 void binaryAdd();
+void multiply();
 void convertFromGivenBaseToDec();
 int main(){
     int userParam = 0;
@@ -35,11 +36,12 @@ int main(){
                 binaryAdd();
                 break;
             case 7:
-            break;
+                multiply();
+                break;
             case 0:
-            break;
+                break;
             default:
-            printf("wrong option!\n");
+                printf("wrong option!\n");
                 break;
         }
     }while(userParam != 0);
@@ -143,4 +145,33 @@ void countBits() {
         count++;
     }
     printf("There are %d different bits\n",count);
+}
+void multiply(){
+    int a, b,result = 0,negative = 0;
+    printf("Enter two numbers:\n");
+    scanf(" %d %d", &a, &b);
+    // טיפול בסימנים
+    if (a < 0) {
+        a = -a;
+        negative = !negative;
+    }
+    if (b < 0) {
+        b = -b;
+        negative = !negative;
+    }
+
+    // אלגוריתם shift-add
+    while (b > 0) {
+        if (b & 1) {
+            result += a;
+        }
+        a <<= 1;
+        b >>= 1;
+    }
+
+    if (negative) {
+        result = -result;
+    }
+
+    printf("%d\n", result);
 }
