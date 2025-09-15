@@ -3,6 +3,7 @@ void Rhombus();
 void countBits();
 void convertFrom20ToDec();
 void checkIfPowerOf2();
+void binaryAdd();
 int main(){
     int userParam = 0;
     do{
@@ -21,7 +22,8 @@ int main(){
                 convertFrom20ToDec();
                 break;
             case 3:
-            break;
+                
+                break;
             case 4:
                 checkIfPowerOf2();
                 break;
@@ -29,7 +31,8 @@ int main(){
                 countBits();
                 break;
             case 6:
-            break;
+                binaryAdd();
+                break;
             case 7:
             break;
             case 0:
@@ -79,6 +82,27 @@ void checkIfPowerOf2() {
            (n > 0 && (n & (n - 1)) == 0) ? "is" : "is not");
 
 }
+#include <stdio.h>
+
+void binaryAdd() {
+    int carry,a=0,b=0;
+    printf("Enter two numbers:\n");
+    scanf(" %d %d",&a,&b);
+    while (b != 0) {
+        // carry now contains common set bits of a and b
+        carry = a & b;
+
+        // sum of bits of a and b where at least one of the bits is not set
+        a = a ^ b;
+
+        // carry is shifted by one so that adding it to a gives the required sum
+        b = carry << 1;
+
+    }
+
+    printf("%d\n", a);
+}
+
 void countBits() {
     int a,b,x,count = 0;
     printf("Enter two numbers:\n");
