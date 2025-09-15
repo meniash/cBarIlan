@@ -4,6 +4,7 @@ void countBits();
 void convertFrom20ToDec();
 void checkIfPowerOf2();
 void binaryAdd();
+void convertFromGivenBaseToDec();
 int main(){
     int userParam = 0;
     do{
@@ -22,7 +23,7 @@ int main(){
                 convertFrom20ToDec();
                 break;
             case 3:
-                
+                convertFromGivenBaseToDec();
                 break;
             case 4:
                 checkIfPowerOf2();
@@ -43,6 +44,35 @@ int main(){
         }
     }while(userParam != 0);
     return 0;
+}
+void convertFromGivenBaseToDec() {
+    int base = 0,num = 0,pow=1,digit = 0,digitNotInBaseflag = 0,numberIsOKflag =1; 
+    char c = '\0';
+    printf("Enter a base (2-10):\n");
+    scanf(" %d",&base);
+    printf("Enter a reversed number in base %d:\n",base);
+    getchar();
+    do {
+        c = getchar();
+    } while (c == ' ' || c == '\t');
+     while (c != '\n' && c != EOF) {
+        if( (c-'0')>=0 && (c-'0')<base) {
+            digit = (c-'0');
+        }else{
+            printf("Error! %c is not a valid digit in base %d\n",c,base);
+            digitNotInBaseflag++;
+            numberIsOKflag = 0 ;
+        }
+        if(!digitNotInBaseflag) {
+            digit *= pow;
+            num += digit;
+            pow *= base;
+        }
+        c = getchar();
+    }
+    if(numberIsOKflag){
+        printf("%d\n",num);
+    }
 }
 void convertFrom20ToDec() {
     char c = '\0';
