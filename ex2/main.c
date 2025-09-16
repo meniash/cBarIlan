@@ -114,26 +114,37 @@ void checkIfPowerOf2() {
            (n > 0 && (n & (n - 1)) == 0) ? "is" : "is not");
 
 }
-#include <stdio.h>
 
 void binaryAdd() {
-    int carry,a=0,b=0;
+    int a, b;
     printf("Enter two numbers:\n");
-    scanf(" %d %d",&a,&b);
-    while (b != 0) {
-        // carry now contains common set bits of a and b
-        carry = a & b;
+    scanf("%d %d", &a, &b);
 
-        // sum of bits of a and b where at least one of the bits is not set
-        a = a ^ b;
+    int res = 0;
+    int mask = 1;
+    int carryIn = 0, carryOut = 0;
 
-        // carry is shifted by one so that adding it to a gives the required sum
-        b = carry << 1;
+    while (a != 0 || b != 0 || carryIn != 0) {
+        int abit = a & 1;
+        int bbit = b & 1;
 
+        // sum = XOR of bits and carry-in
+        int sum = abit ^ bbit ^ carryIn;
+        if (sum) res |= mask;
+
+        // carry-out = (a&b) | (b&carryIn) | (a&carryIn)
+        carryOut = (abit & bbit) | (bbit & carryIn) | (abit & carryIn);
+
+        // shift
+        carryIn = carryOut;
+        a >>= 1;
+        b >>= 1;
+        mask <<= 1;
     }
 
-    printf("%d\n", a);
+    printf("Result = %d\n", res);
 }
+
 
 void countBits() {
     int a,b,x,count = 0;
