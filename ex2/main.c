@@ -116,33 +116,32 @@ void checkIfPowerOf2() {
 }
 
 void binaryAdd() {
-    int a, b;
+    int a, b,carryIn = 0, carryOut = 0;
     printf("Enter two numbers:\n");
     scanf("%d %d", &a, &b);
 
-    int res = 0;
-    int mask = 1;
-    int carryIn = 0, carryOut = 0;
+    unsigned ua = (unsigned)a;   // raw bit view
+    unsigned ub = (unsigned)b;
+    unsigned res = 0;
+    unsigned mask = 1;
 
-    while (a != 0 || b != 0 || carryIn != 0) {
-        int abit = a & 1;
-        int bbit = b & 1;
+    while (ua != 0 || ub != 0 || carryIn != 0) {
+        unsigned abit = ua & 1;
+        unsigned bbit = ub & 1;
 
-        // sum = XOR of bits and carry-in
-        int sum = abit ^ bbit ^ carryIn;
+        unsigned sum = abit ^ bbit ^ carryIn;
         if (sum) res |= mask;
 
-        // carry-out = (a&b) | (b&carryIn) | (a&carryIn)
         carryOut = (abit & bbit) | (bbit & carryIn) | (abit & carryIn);
 
-        // shift
         carryIn = carryOut;
-        a >>= 1;
-        b >>= 1;
+        ua >>= 1;
+        ub >>= 1;
         mask <<= 1;
     }
 
-    printf("Result = %d\n", res);
+    // Print everything
+    printf("%d\n", res);
 }
 
 
